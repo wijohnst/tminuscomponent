@@ -1,0 +1,32 @@
+*{
+  font-family: monospace;
+}
+#heading-wrapper{
+  background: lightpink;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 2fr;
+  grid-template-areas: 
+    "banner banner"
+    "date time";
+  grid-gap: 2px;
+}
+
+#banner-wrapper{
+  text-align: center;
+  background: lightgreen;
+  grid-area: banner;
+  padding: 10px;
+}
+
+#date-wrapper{
+  text-align: center;
+  background: lightslategrey;
+  grid-area: date;
+}
+
+#time-wrapper{
+  text-align: center;
+  background: lightyellow;
+  grid-area: time;
+}

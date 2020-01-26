@@ -1,0 +1,6 @@
+#tMinusWrapper{
+  background: lightgreen;
+  display: grid;
+  place-content: center;
+  padding: 20px;
+}

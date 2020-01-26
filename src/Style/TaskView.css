@@ -1,0 +1,13 @@
+#tasks-wrapper{
+  display: grid;
+  /* background: limegreen; */
+  /* grid-template-columns: auto; */
+  /* grid-template-areas: ". tasks ."; */
+  grid-gap: 5px;
+}
+
+#task-area{
+  /* background-color: lightpink; */
+  grid-template: tasks;
+  text-align: center;
+}
