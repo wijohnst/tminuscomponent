@@ -5,10 +5,7 @@ import moment from 'moment';
 
 export class App extends React.Component {
   state = {
-    eventDetails: {
-      eventDate: "2020-01-26",
-      startTime: "19:00"
-    },
+    eventDetails: {},
     tMinus: undefined,
     tasks: [],
     completedTasks: undefined
