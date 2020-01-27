@@ -27,8 +27,10 @@ export class TaskForm extends Component {
     let unit = e.target.value;
     let conversionFactor = undefined;
     let hoursConversion = {...this.state.hoursConversion};
-    let time = {...this.state.time};
+    let time = [...this.state.time];
 
+    let timeInt = parseInt(time.join(''));
+    
     switch(unit){
       case 'day':
         conversionFactor = 24;
@@ -37,18 +39,14 @@ export class TaskForm extends Component {
         conversionFactor = 1;
         break;
       case 'minute':
-        conversionFactor = 0.02;
+        conversionFactor = 0.0166667;
         break;
       default:
         conversionFactor = 1;
     }
 
-    hoursConversion = (parseInt(time[0])) * conversionFactor;
+    hoursConversion = (timeInt * conversionFactor).toFixed(2);
     this.setState({ hoursConversion });
-    // let hoursConversion = {...this.state.hoursConversion};
-    // let time = {...this.state.time};
-    // hoursConversion = (parseFloat(e.target.value) * parse(time[0]));
-    // this.setState({ hoursConversion });
   }
 
   handleSubmit = e =>{
