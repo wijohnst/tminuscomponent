@@ -7,7 +7,7 @@ export class App extends React.Component {
   state = {
     eventDetails: {},
     // eventDetails: {
-      // eventDate: "2020-01-26",
+      // eventDate: "2020-01-28",
       // startTime: "19:00"
     // },
     tMinus: undefined,
@@ -26,6 +26,7 @@ export class App extends React.Component {
     console.log(`Calculating T-Minus...`)
     
     let now = moment(Date.now());
+    moment.relativeTimeThreshold('h', 24*10000);
     let eventDetails = this.state.eventDetails;
     let {eventDate , startTime} = eventDetails;
     let eventString = `${eventDate} ${startTime}`;
@@ -35,7 +36,7 @@ export class App extends React.Component {
       console.log('TPlus...')
     }
 
-    tMinus = moment(eventString).fromNow('hh:mm');
+    tMinus = moment(eventString).fromNow(true);
     
     this.setState({ tMinus });
   }
