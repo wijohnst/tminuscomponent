@@ -10,7 +10,7 @@ export class TMinus extends Component {
   render() {
     return (
       <div id='tMinusWrapper'>
-        <h1> T-Minus : {this.props.tMinus} </h1>
+        <h1>T-Minus : {this.props.tMinus} </h1>
       </div>
     )
   }

@@ -5,15 +5,16 @@ import moment from 'moment';
 
 export class App extends React.Component {
   state = {
-    eventDetails: {},
-    // eventDetails: {
-    //   eventDate: "2020-01-26",
-    //   startTime: "19:00"
+    // eventDetails: {},
+    eventDetails: {
+      eventDate: "2020-01-26",
+      startTime: "19:00"
 
-    // },
+    },
     tMinus: undefined,
     tasks: [],
-    completedTasks: undefined
+    completedTasks: undefined,
+    tPlus: false
   }
 
   setEventDetails = formResponse =>{
@@ -24,12 +25,19 @@ export class App extends React.Component {
 
   calculateTMinus = () =>{
     console.log(`Calculating T-Minus...`)
+    
+    let now = moment(Date.now());
     let eventDetails = this.state.eventDetails;
     let {eventDate , startTime} = eventDetails;
     let eventString = `${eventDate} ${startTime}`;
     let tMinus = {...this.state.tMinus};
-    tMinus = moment(eventString).fromNow('hh:mm');
+    
+    if(now.isAfter(moment(eventString))){
+      console.log('TPlus...')
+    }
 
+    tMinus = moment(eventString).fromNow('hh:mm');
+    
     this.setState({ tMinus });
   }
 

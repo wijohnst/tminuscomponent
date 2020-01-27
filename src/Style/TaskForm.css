@@ -1,17 +1,21 @@
 .input-wrapper{
+  padding: 5px;
   display: grid;
   /* background: lightgreen; */
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
-  "input-one input-two input-three"
+  ". input-one ."
+  ". input-two ."
+  ". input-three ."
   ". submit .";
 }
 
 .input-description-wrapper{
   padding: 5px;
   text-align: right;
-  /*  background: lightgray; */
+  /* background: lightgray; */
   grid-area: input-one;
 }
 
@@ -23,30 +27,61 @@
 }
 
 .input-unit-select-wrapper{
+  padding: 5px;
+  /* background: lightskyblue; */
   grid-area: input-three;
 }
 
 .input-submit-button-wrapper{
   /* background: lightskyblue; */
-  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-areas: 
+  ". create sort .";
   grid-area: submit;
 }
 
 #input-description{
   text-align: center;
-  width: 75%;
+  width: 100%;
 }
 
 #input-lead-time{
   text-align: center;
-  width: 75%;
+  width: 100%;
 }
 
 #input-unit-select{
-  width: 75%;
+  width: 100%;
   border-radius: none;
+  text-align-last: center;
+  background: white;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
-#input-submit{
-  width: 25%;
+.input-submit{
+  text-decoration: none;
+  outline: none;
+  background: lightgray;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+.input-submit:active{
+  box-shadow: none;
+}
+
+#input-form-submit{
+  grid-area: create;
+}
+
+#input-sort-tasks{
+  grid-area: sort;
+}
+
+#description-label{
+  /* background: lightpink; */
+  text-align: center;
 }
