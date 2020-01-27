@@ -67,7 +67,7 @@ export class TaskForm extends Component {
     render() {
     return (
       <div>
-        <form id="create-task-form" onSubmit={this.handleSubmit}>
+        <form id="create-task-form" onSubmit={this.handleSubmit} data-netlify="true">
           <div className="input-wrapper">
             <div className="input-description-wrapper">
               <h3 id="description-label">Task Description:</h3>
