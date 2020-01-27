@@ -2,7 +2,7 @@
   font-family: monospace;
 }
 #heading-wrapper{
-  background: lightpink;
+  /* background: lightpink; */
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 2fr;
@@ -14,19 +14,19 @@
 
 #banner-wrapper{
   text-align: center;
-  background: lightgreen;
+  /* background: lightgreen; */
   grid-area: banner;
   padding: 10px;
 }
 
 #date-wrapper{
   text-align: center;
-  background: lightslategrey;
+  /* background: lightslategrey; */
   grid-area: date;
 }
 
 #time-wrapper{
   text-align: center;
-  background: lightyellow;
+  /* background: lightyellow; */
   grid-area: time;
 }

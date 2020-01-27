@@ -9,15 +9,15 @@ export class Tasks extends Component {
         return(
           <React.Fragment>
             <TaskPrompt />
-            <TaskForm />
+            <TaskForm createTask={this.props.createTask} sortTasks={this.props.sortTasks} />
           </React.Fragment>
         )
       }else{
         return (
         <div>
           <React.Fragment>
-            <TaskView tasks={this.props.tasks} sortTasks={this.props.sortTasks} completeTask={this.props.completeTask}/>
-            <TaskForm />
+            <TaskView tasks={this.props.tasks} sortTasks={this.props.sortTasks} completeTask={this.props.completeTask} />
+            <TaskForm createTask={this.props.createTask} sortTasks={this.props.sortTasks} />
           </React.Fragment>
         </div>
       )

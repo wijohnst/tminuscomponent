@@ -6,9 +6,10 @@ const uuidv1 = require('uuid/v1');
 
 export class TaskView extends Component {
   componentDidMount(){
+    console.log('Sorting...')
     this.props.sortTasks();
-  }  
-
+  } 
+  
   render() {
 
     if(this.props.tasks){

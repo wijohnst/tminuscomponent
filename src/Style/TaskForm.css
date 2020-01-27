@@ -1,0 +1,52 @@
+.input-wrapper{
+  display: grid;
+  /* background: lightgreen; */
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "input-one input-two input-three"
+  ". submit .";
+}
+
+.input-description-wrapper{
+  padding: 5px;
+  text-align: right;
+  /*  background: lightgray; */
+  grid-area: input-one;
+}
+
+.input-lead-time-wrapper{
+  padding: 5px;
+  text-align: center;
+  /* background: lightpink; */
+  grid-area: input-two;
+}
+
+.input-unit-select-wrapper{
+  grid-area: input-three;
+}
+
+.input-submit-button-wrapper{
+  /* background: lightskyblue; */
+  text-align: center;
+  grid-area: submit;
+}
+
+#input-description{
+  text-align: center;
+  width: 75%;
+}
+
+#input-lead-time{
+  text-align: center;
+  width: 75%;
+}
+
+#input-unit-select{
+  width: 75%;
+  border-radius: none;
+}
+
+#input-submit{
+  width: 25%;
+}

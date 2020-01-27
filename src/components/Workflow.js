@@ -16,7 +16,7 @@ export class CreateEvent extends Component {
       return(
         <React.Fragment>
           <Countdown eventDetails = {this.props.eventDetails} calculateTMinus = {this.props.calculateTMinus} tMinus={this.props.tMinus} />
-          <Tasks tasks={this.props.tasks} sortTasks={this.props.sortTasks} completeTask={this.props.completeTask}/>
+          <Tasks tasks={this.props.tasks} sortTasks={this.props.sortTasks} completeTask={this.props.completeTask} createTask={this.props.createTask}/>
         </React.Fragment>
         
       );
